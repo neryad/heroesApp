@@ -9,6 +9,13 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
   {
+    path: 'heroes',
+    loadChildren: () =>
+      import('./heroes/heroes-routing.module').then(
+        (m) => m.HeroesRoutingModule
+      ),
+  },
+  {
     path: '404',
     component: ErrorPageComponent,
   },
