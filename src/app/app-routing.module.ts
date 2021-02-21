@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { AuthModule } from './auth/auth.module';
+import { HeroesModule } from './heroes/heroes.module';
 
 const routes: Routes = [
   {
@@ -11,9 +12,7 @@ const routes: Routes = [
   {
     path: 'heroes',
     loadChildren: () =>
-      import('./heroes/heroes-routing.module').then(
-        (m) => m.HeroesRoutingModule
-      ),
+      import('./heroes/heroes.module').then((m) => m.HeroesModule),
   },
   {
     path: '404',
