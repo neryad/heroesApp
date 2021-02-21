@@ -8,6 +8,8 @@ import { ListadoComponent } from './pages/listado/listado.component';
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material/material.module';
+import { HeroeCardComponent } from './components/heroe-card/heroe-card.component';
+import { ImagenPipe } from './pipe/imagen.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { MaterialModule } from '../material/material.module';
     HeroeComponent,
     HomeComponent,
     ListadoComponent,
+    HeroeCardComponent,
+    ImagenPipe,
   ],
   imports: [
     CommonModule,
