@@ -5,7 +5,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
-
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 @NgModule({
   exports: [
     MatSidenavModule,
@@ -14,7 +16,9 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatGridListModule,
+    MatProgressSpinnerModule,
+    MatAutocompleteModule,
   ],
-  //imports: [MatSidenavModule, MatToolbarModule],
 })
 export class MaterialModule {}
