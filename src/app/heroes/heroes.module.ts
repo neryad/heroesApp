@@ -10,6 +10,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material/material.module';
 import { HeroeCardComponent } from './components/heroe-card/heroe-card.component';
 import { ImagenPipe } from './pipe/imagen.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,8 +25,7 @@ import { ImagenPipe } from './pipe/imagen.pipe';
   imports: [
     CommonModule,
     FlexLayoutModule,
-    //MaterialModule,
-
+    FormsModule,
     MaterialModule,
     HeroesRoutingModule,
   ],
