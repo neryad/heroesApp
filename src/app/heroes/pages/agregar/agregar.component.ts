@@ -29,6 +29,10 @@ export class AgregarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    if (!this.router.url.includes('edit')) {
+      return;
+    }
+
     this.activatedRoute.params
       .pipe(switchMap(({ id }) => this.heroServices.getHero(id)))
       .subscribe((hero) => (this.hero = hero));
@@ -48,5 +52,11 @@ export class AgregarComponent implements OnInit {
         this.router.navigate(['/heroes/edit', res.id]);
       });
     }
+  }
+
+  borrar() {
+    this.heroServices.deleteHero(this.hero.id!).subscribe((res) => {
+      this.router.navigate(['heroes']);
+    });
   }
 }

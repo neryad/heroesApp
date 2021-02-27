@@ -39,9 +39,15 @@
       <input [(ngModel)]="hero.alt_img" matInput type="url" required />
     </mat-form-field>
     <br />
-    <button (click)="guardar()" mat-raised-button color="primary">
-      Guardar
-    </button>
+    <div fxLayout>
+      <button (click)="guardar()" mat-raised-button color="primary">
+        Guardar
+      </button>
+      <span class="spacer"></span>
+      <button (click)="borrar()" *ngIf="hero.id" color="warn" mat-raised-button>
+        Borrar
+      </button>
+    </div>
   </div>
 
   <div fxFlex="50">
