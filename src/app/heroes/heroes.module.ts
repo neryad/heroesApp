@@ -11,6 +11,7 @@ import { MaterialModule } from '../material/material.module';
 import { HeroeCardComponent } from './components/heroe-card/heroe-card.component';
 import { ImagenPipe } from './pipe/imagen.pipe';
 import { FormsModule } from '@angular/forms';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     ListadoComponent,
     HeroeCardComponent,
     ImagenPipe,
+    DialogComponent,
   ],
   imports: [
     CommonModule,
