@@ -26,8 +26,10 @@
     <button (click)="sidenav.toggle()" mat-icon-button>
       <mat-icon>menu</mat-icon>
     </button>
+
     <span class="spacer"></span>
-    <button mat-button>LogOut</button>
+    <span>{{ auth.usuario }}</span>
+    <button (click)="logOut()" mat-button>LogOut</button>
   </mat-toolbar>
   <div class="container">
     <router-outlet></router-outlet>
